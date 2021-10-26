@@ -3,17 +3,12 @@
 {% block title %}Index{% endblock %}
 {% block page_content %}
 <div class=""page-header">
-	<h3>Hello
-		{% if name %}
-			{{ name }}
-		{% else %}
-			new user
-		{% endif %}
-	</h3>
+	<h3>Hello, {% if name %}{{ name }} {% else %}new user {% endif %}!</h3>
 	{% if known %}
 		<p>Happy to see you again!</p>
 	{% else %}
 		<p>Pleased to meet you!</p>
+	{% endif %}
 </div>
 {{ wtf.quick_form(form) }}
 {% endblock %}
